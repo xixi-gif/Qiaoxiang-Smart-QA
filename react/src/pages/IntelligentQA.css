@@ -1,0 +1,58 @@
+/* 全局动画 */
+.animate-fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 卡片悬停效果 */
+.transform {
+  transition: all 0.3s ease;
+}
+
+.transform:hover {
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+/* 按钮交互动效 */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* 输入框样式增强 */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* 图片加载占位 */
+[alt="侨乡文化讲解员"] {
+  transition: opacity 0.3s ease;
+}
+
+[alt="侨乡文化讲解员"]:not([src]) {
+  opacity: 0.5;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .lg:col-span-4,
+  .lg:col-span-8 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
